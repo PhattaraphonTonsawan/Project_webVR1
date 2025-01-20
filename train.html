@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.5.2/dist/aframe-extras.min.js"></script>
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .info-box {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 15px;
+      border-radius: 10px;
+      max-width: 300px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .info-box h3 {
+      margin: 0 0 10px 0;
+    }
+
+    .info-box p {
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <a-scene inspector keyboard-shortcuts screenshot xr-mode-ui device-orientation-permission-ui>
+    <!-- ท้องฟ้า -->
+    <a-sky color="#ECECEC"></a-sky>
+
+    <!-- โมเดล -->
+    <a-entity position="0.716 0.005 5.224" scale="17.798 37.712 20.255" gltf-model="/model_train/train_station.glb"></a-entity>
+
+    <a-entity position="-5.159 0.005 -24.52415" scale="6.253 3.714 3.774" gltf-model="/model_train/train.glb" rotation="0 -90.003 0"
+      animation-mixer></a-entity>
+
+    <a-entity position="-39.24776 3.64403 -28.51956" scale="7.413 3.418 3.774" gltf-model="/model_train/way_out_sign.glb"
+      rotation="0 2.432 0"></a-entity>
+
+
+
+    <a-entity gltf-model="industrial_button.glb" class="clickable" animation-mixer="" scale="0.75 0.75 0.75"
+      position="1.06253 2.24982 -7.41638" rotation="90 -90 0"></a-entity>
+
+    <a-entity camera position="0 1.6 5" wasd-controls look-controls>
+      <a-entity cursor="rayOrigin: mouse" raycaster="objects: .clickable" position="0 0 -1"
+        geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: white; shader: flat"></a-entity>
+    </a-entity>
+  </a-scene>
+
+  <!-- Information Box -->
+  <div class="info-box">
+    <h3>The Rocket</h3>
+    <p>
+      Created by: George and Robert Stephenson (1829)<br />
+      Significance: It was one of the first practical steam locomotives and won the Rainhill Trials, demonstrating the
+      capabilities of steam-powered trains in the early era.
+    </p>
+  </div>
+
+  <script>
+    // Add navigation to Warship page on click
+    document.querySelectorAll('.clickable').forEach(entity => {
+      entity.addEventListener('click', () => {
+        // Redirect to the Warships page
+        window.location.href = 'index.html';
+      });
+    });
+  </script>
+</body>
+
+</html>

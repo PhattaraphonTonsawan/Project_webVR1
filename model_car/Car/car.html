@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Scene with Lighting</title>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.5.2/dist/aframe-extras.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/protyze/aframe-rounded-box-component/dist/aframe-rounded-box-component.min.js"></script>
+
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        font-family: Arial, sans-serif;
+      }
+  
+      .info-box {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 15px;
+        border-radius: 10px;
+        max-width: 300px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      }
+  
+      .info-box h3 {
+        margin: 0 0 10px;
+      }
+  
+      .info-box p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+    </style>
+</head>
+<body>
+    <a-scene>
+        <!-- Sky -->
+        <a-sky color="#222"></a-sky>
+
+        <!-- Ambient Light -->
+        <a-light type="ambient" color="#424040"></a-light>
+
+        <!-- Directional Light -->
+        <a-light type="directional" color="#ffffff" intensity="1" position="-5 5 -2" target="#target"></a-light>
+
+        <!-- Spot Light for Dynamic Shadows -->
+        <a-light type="spot" color="#ffffff" intensity="1.5" position="0 4 -2" target="#car" angle="30" penumbra="0.5" cast-shadow="true"></a-light>
+
+        <!-- Garage Model -->
+        <a-entity 
+    gltf-model="/model_car/garage.glb" 
+    scale="0.5 0.5 0.5" 
+    position="0 0 -5" 
+    rotation="0 0 0">
+</a-entity>
+
+
+        <!-- Car Model -->
+        <a-entity id="car" gltf-model="/model_car/car.glb" animation-mixer="clip:*" scale="0.01 0.01 0.01" position=".7 -.2 -3.8" rotation="0 320 0" shadow="cast: true; receive: true"></a-entity>
+
+        <!-- Board Model -->
+        <a-entity id="board" gltf-model="/model_car/board.glb" animation-mixer="clip:*" scale="1.2 1.2 1.2" position="-2.5 .8 -3.5" rotation="0 50 0" shadow="cast: true; receive: true"></a-entity>
+
+        <a-entity gltf-model="/model_car/industrial_button.glb" class="clickable" animation-mixer="" scale="1 1 1" position="1.5 1 -2" rotation="270 120 0">
+        </a-entity>
+
+        <a-entity 
+        camera 
+        position="0 1.5 0" 
+        wasd-controls 
+        look-controls="enabled: true">
+        <a-entity 
+          cursor="rayOrigin: mouse" 
+          raycaster="objects: .clickable" 
+          position="0 0 -1" 
+          geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" 
+          material="color: white; shader: flat">
+        </a-entity>
+      </a-entity>
+
+     <!-- Text on Info Board -->
+     <a-text 
+        text="value: Vaz 107; color: write; width: 5; align: center;" 
+        position=".7 1.5 -3.7" 
+        rotation="0 320 0" 
+        width="2"
+        color="#FFFFFF"
+        align="center"></a-text>
+//================================================================================================//
+     
+        <!-- Text on Info Board -->
+      
+    </a-scene>
+
+     <!-- Information Box -->
+  <div class="info-box">
+    <h3>The Vaz 107</h3>
+    <p>
+      value: 
+            The Vaz 107, commonly known as the Lada Oka, is a compact car developed by AvtoVAZ, a Russian car manufacturer under the Lada brand. It was designed as an affordable urban vehicle suitable for city driving.
+            Production: Manufactured between 1988 and 2008.
+            Category: Microcar (City Car).
+            Transmission: 4-speed manual transmission.
+    </p>
+  </div>
+    <script>
+        // Add navigation to Warship page on click
+        document.querySelectorAll('.clickable').forEach(entity => {
+          entity.addEventListener('click', () => {
+            // Redirect to the Warships page
+            window.location.href = 'index.html';
+          });
+        });
+    </script>
+</body>
+</html>

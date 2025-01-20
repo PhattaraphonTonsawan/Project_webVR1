@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.5.2/dist/aframe-extras.min.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <a-scene inspector="" keyboard-shortcuts="" screenshot="" xr-mode-ui="" device-orientation-permission-ui="">
+    <!-- ท้องฟ้า -->
+    <a-sky color="#ECECEC" material="" geometry="" scale="-1 1 -5.205"></a-sky>
+
+    <a-plane position="-2.197 -0.19022 -7.787" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" material=""
+      geometry="" scale="100 30.206 1.423"></a-plane>
+
+    <!-- โมเดล -->
+    <a-entity position="0.716 0.005 1.50472" scale="3 3 3" rotation="0 -90.003 0"
+      gltf-model="/model_index/main_hall.glb">
+    </a-entity>
+
+    <a-entity position="-12.30448 -0.0522 -11.29754" scale="2.20827 2.42547 2.5433" animation-mixer=""
+      rotation="0 -33.6990856784145 0" gltf-model="/model_index/train.glb" class="clickToTrain">
+    </a-entity>
+
+    <a-entity position="0.711 2.51568 -12.05303" scale="0.15 0.15 0.15" animation-mixer=""
+      rotation="0 -170.9602928267253 0" gltf-model="/model_index/wooden_bicycle.glb" class="clickToBike">
+    </a-entity>
+
+    <a-entity position="14.87663 -0.26585 -11.2132" scale="0.3 0.3 0.3" animation-mixer=""
+      rotation="4.6163209553690425 -102.53079743866084 -4.859828018299643"
+      gltf-model="/model_index/b17_bomber_midland_dime.glb" class="clickToPlane">
+    </a-entity>
+
+    <a-entity position="22.33478 0.32563 2.33594" scale="100 100 100" animation-mixer="" rotation="0 90.4459716237615 0"
+      gltf-model="/model_index/uss_missouri_bb-63_1991.glb" class="clickToShip">
+    </a-entity>
+
+    <a-sky color="#ECECEC" material="" geometry=""></a-sky>
+
+    <a-entity position="-16.31388 0.17739 1.13514" scale="0.02 0.02 0.02" rotation="0 94.28765364011366 0"
+      gltf-model="/model_index/old_car_-_vaz_2107.glb" class="clickToCar">
+    </a-entity>
+
+    <a-entity position="-11.26493 0.50184 10.91812" scale="0.03 0.03 0.03" rotation="0 152.7918011431269 0"
+      gltf-model="/model_index/larry_motorcycle-old.glb" class="clickToMotorcycle">
+    </a-entity>
+    <a-entity position="14.41884 -0.07599 14.12263" scale="0.08 0.08 0.08" rotation="0 -140.6794733540613 0"
+      gltf-model="/model_index/tractor_-_farmers_best_friend.glb" class="clickToTractor">
+    </a-entity>
+    <a-entity position="0.19477 0.35761 16.04391" scale="0.5 0.5 0.5" rotation="0 -172.8951713008821 0"
+      gltf-model="/model_index/light_fighter_spaceship_-_free_-.glb" class="clickToSpaceship">
+    </a-entity>
+
+
+    <a-entity id="UFO" position="3.14927 -0.00073 12.20286" scale="5 5 5"
+      rotation="-1.563028865116886 -163.02654623754879 -0.6537448442442693" gltf-model="/model_index/board.glb">
+    </a-entity>
+    <a-entity id="ALL" position="3.14142 0 12.17713" scale="5 5 5"
+      rotation="-1.563028865116886 -163.02654623754879 -0.6537448442442693" gltf-model="/model_index/board.glb">
+    </a-entity>
+    <a-entity id="E T" position="10.16249 0 6.71457" scale="5 5 5"
+      rotation="-1.563028865116886 -115.66184418746901 -0.6537448442442693" gltf-model="/model_index/board.glb">
+    </a-entity>
+    <a-entity id="motorcy" position="-6.46943 0 9.43261" scale="5 5 5"
+      rotation="-1.563028865116886 148.7524486874546 -0.6537448442442693" gltf-model="/model_index/board.glb">
+    </a-entity>
+    <a-entity <a-entity="" id="Car" position="-10.12319 0 3.48848" scale="5 5 5"
+      rotation="-1.563028865116886 100.04587948117843 -0.6537448442442693" gltf-model="/model_index/board.glb">
+    </a-entity>
+    <a-entity id="E T-2" position="12.85215 0 -0.47225" scale="5 5 5"
+      rotation="-1.563028865116886 -71.35673676338784 -0.6537448442442693" gltf-model="/model_index/board.glb">
+    </a-entity>
+    <a-entity id="T-2" position="5.92934 -0.01679 -11.08139" scale="5 5 5"
+      rotation="-1.563028865116886 -17.82987362667609 -0.6537448442442693" gltf-model="/model_index/board.glb">
+    </a-entity>
+    <a-entity id="T-3" position="-1.599 0 -11.878" scale="5 5 5" rotation="-1.563 9.555 -0.654"
+      gltf-model="/model_index/board.glb">
+    </a-entity>
+    <a-entity id="T-4" position="-9.061 0 -5.408" scale="5 5 5" rotation="-1.563 66.657 -0.654"
+      gltf-model="/model_index/board.glb">
+    </a-entity>
+
+    <a-text value="Bamboo Bicycle" position="-1.52236 1.23314 -11.32817" color="black" align="center" width="6"
+      rotation="0 0.05213915935690491 0" text="" scale="0.55982 0.65021 1">
+    </a-text><a-text value="Bamboo Bicycle" position="-9.02417 1.23314 -5.40153" color="black" align="center" width="6"
+      rotation="0 65.71195656575898 0" text="value: The Rocket" scale="0.55982 0.65021 1">
+    </a-text><a-text value="Bamboo Bicycle" position="-10.05072 1.19851 3.45382" color="black" align="center" width="6"
+      rotation="0 97.54721053661292 0" text="value: The Vaz 107" scale="0.55982 0.65021 1">
+    </a-text><a-text value="Bamboo Bicycle" position="-6.45484 1.19851 9.38195" color="black" align="center" width="6"
+      rotation="-2.1869799040143523 150.32808262406436 -1.4037465980705173" text="value: Cruiser motocycle"
+      scale="0.50662 0.43717 1">
+    </a-text><a-text value="Bamboo Bicycle" position="3.10533 1.20587 12.14723" color="black" align="center" width="6"
+      rotation="0.12433184154338864 -164.58212665132896 0.3139808717316911" text="value: (JWST)"
+      scale="0.50662 0.43717 1">
+    </a-text><a-text value="Bamboo Bicycle" position="10.10729 1.22219 6.71227" color="black" align="center" width="6"
+      rotation="-0.15126085791453733 -116.36429044429943 0.3019487580339439" text="value: Tractor farmers"
+      scale="0.50662 0.43717 1">
+    </a-text><a-text value="Bamboo Bicycle" position="12.81311 1.18405 -0.4449" color="black" align="center" width="6"
+      rotation="-0.31741861850247605 -72.99367718407663 0.11573747461642629" text="value: USS Missouri"
+      scale="0.50662 0.43717 1">
+    </a-text><a-text value="Bamboo Bicycle" position="5.92724 1.17892 -11.00944" color="black" align="center" width="6"
+      rotation="-0.27616565725305675 -17.657986288136843 -0.19537860813961075" text="value: B17 Boomber"
+      scale="0.50662 0.43717 1">
+    </a-text>
+
+
+    <a-entity camera position="0 1.6 5" wasd-controls look-controls="enabled: true">
+      <a-entity cursor="rayOrigin: mouse" raycaster="
+      objects: .clickToTrain, .clickToBike, .clickToPlane, .clickToShip, .clickToCar, .clickToMotorBike, .clickToTractor, .clickToSpaceship; 
+      direction: -0.0041 0.3426 -0.9395; 
+      origin: 4.2137 2.4426 -5.8741; 
+      useWorldCoordinates: true" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+        material="color: white; shader: flat">
+      </a-entity>
+    </a-entity>
+
+
+    <a-sound src="/background-music-mp3-free-download-267823.mp3" autoplay="true" loop="true" position="0 1.6 -3">
+    </a-sound>
+
+  </a-scene>
+
+  <script>
+    document.querySelectorAll('.clickToTrain').forEach(entity => {
+      entity.addEventListener('click', () => { window.location.href = 'train.html'; });
+    });
+    document.querySelectorAll('.clickToBike').forEach(entity => {
+      entity.addEventListener('click', () => { window.location.href = 'bicycle.html'; });
+    });
+    document.querySelectorAll('.clickToPlane').forEach(entity => {
+      entity.addEventListener('click', () => { window.location.href = 'plane.html'; });
+    });
+    document.querySelectorAll('.clickToSpaceship').forEach(entity => {
+      entity.addEventListener('click', () => { window.location.href = 'sship.html'; });
+    });
+    document.querySelectorAll('.clickToShip').forEach(entity => {
+      entity.addEventListener('click', () => { window.location.href = 'ship.html'; });
+    });
+    document.querySelectorAll('.clickToCar').forEach(entity => {
+      entity.addEventListener('click', () => { window.location.href = 'car.html'; });
+    });
+    document.querySelectorAll('.clickToMotorBike').forEach(entity => {
+      entity.addEventListener('click', () => { window.location.href = 'mbike.html'; });
+    });
+    document.querySelectorAll('.clickToTractor').forEach(entity => {
+      entity.addEventListener('click', () => { window.location.href = 'tractor.html'; });
+    });
+  </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.5.2/dist/aframe-extras.min.js"></script>
+</head>
+
+<style>
+  body {
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+  }
+
+  .info-box {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .info-box h3 {
+    margin: 0 0 10px;
+  }
+
+  .info-box p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+</style>
+
+<body>
+  <a-scene inspector="" keyboard-shortcuts="" screenshot="" xr-mode-ui="" device-orientation-permission-ui="">
+    <!-- ท้องฟ้า -->
+    <a-sky color="#ECECEC" material="" geometry="" scale="-1 1 -5.20524"></a-sky>
+
+    <!-- โมเดล -->
+    <a-entity position="0 0.015 -3" scale="3.376 2.41 3.647" gltf-model="/model_bicycle/white-room1.glb">
+    </a-entity>
+
+    <a-entity position="7.25337 1.566 -6.61" scale="-0.11 0.103 0.103" gltf-model="/model_bicycle/wooden_bicycle.glb">
+    </a-entity>
+
+    <a-entity position="9.6966 3.15934 -3.4406" scale="2.87236 1.96878 1.62428" gltf-model="/model_bicycle/spotlight.glb" rotation="5.3668956669904215 -113.72467388213171 -7.921714475478762">
+    </a-entity><a-entity position="9.6469 3.29707 -7.56457" scale="2.87236 1.96878 1.62428" gltf-model="/model_bicycle/spotlight.glb" rotation="9.558654896167525 -57.63038686543873 0">
+    </a-entity>
+
+    <a-entity position="8.74776 0.15846 -5.13962" scale="-0.15321 0.04948 0.16312" gltf-model="/model_bicycle/rotating_light_platform_final.glb">
+    </a-entity>
+
+    <a-entity position="6.77414 0.96181 -13.64357" scale="-0.01931 0.01908 0.02009" gltf-model="/model_bicycle/black_vase_decorative.glb">
+    </a-entity>
+    <a-entity position="5.81973 0.91568 -14.32854" scale="-0.01931 0.01908 0.02009" gltf-model="/model_bicycle/black_vase_decorative.glb">
+    </a-entity>
+    <a-entity position="7.88886 2.10374 -15.24601" scale="0.03531 0.04394 0.03052" gltf-model="/model_bicycle/black_vase_decorative.glb">
+    </a-entity>
+
+    <a-entity position="-8.99366 0.36674 8.89522" scale="3.61863 3.49581 4.28382" gltf-model="/model_bicycle/modern_wooden_corner_shelf_unit.glb" rotation="0 93.5634349870683 0">
+    </a-entity>
+
+    <a-entity position="-8.994 2.14388 5.5268" scale="0.035 0.044 0.031" gltf-model="/model_bicycle/black_vase_decorative.glb" rotation="0 93.563 0">
+    </a-entity><a-entity position="-8.44207 1.56638 6.84299" scale="0.035 0.03155 0.031" gltf-model="/model_bicycle/black_vase_decorative.glb" rotation="0 93.563 0">
+    </a-entity>
+
+    <a-entity position="-4.54785 2.14388 9.11524" scale="0.035 0.044 0.031" gltf-model="/model_bicycle/black_vase_decorative.glb" rotation="0 93.563 0">
+    </a-entity>
+
+    <a-entity position="-9.17249 -0.02104 -15.37317" scale="0.0035 0.004 0.003" gltf-model="/model_bicycle/mossi_female_figure.glb" rotation="0 93.563 0">
+    </a-entity>
+
+    <a-entity position="-9.26705 -0.14943 -4.15864" scale="1.19349 0.59889 0.50814" gltf-model="/model_bicycle/stoops_table.glb" rotation="0 93.563 0">
+    </a-entity><a-entity position="-9.18474 -0.14943 -6.11183" scale="0.87312 0.89456 0.50814" gltf-model="/model_bicycle/stoops_table.glb" rotation="0 93.563 0">
+    </a-entity>
+
+    <a-entity position="6.76 2.359 6.908" scale="-5.078 -4.749 0.387" gltf-model="/model_bicycle/note_board-_7mb.glb" rotation="0 -137.515 180">
+    </a-entity>
+
+    <a-entity position="3.47013 0.69706 9.29294" scale="5 5 5" gltf-model="/model_bicycle/industrial_button.glb" rotation="1.0473668494991448 137.52591364966125 1.1430508012859923">
+    </a-entity>
+
+    <a-entity gltf-model="industrial_button.glb" class="clickable" animation-mixer="" scale="0.75 0.75 0.75" position="0.33717 1.95312 -3.37889" rotation="90 -90 0">
+    </a-entity>
+
+    <a-entity camera="" position="0 1.6 5" wasd-controls="" look-controls="" rotation="-18.334649444186354 -137.50987083139762 0" data-aframe-inspector-original-camera="">
+    <a-entity cursor="rayOrigin: mouse" raycaster="objects: .clickable; direction: 0.5791125066713587 -0.010670333461987588 0.8151778018325972; origin: -3.5725620241476235 4.7372992307257835 0.9651199988541257; useWorldCoordinates: true" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: white; shader: flat">
+    </a-entity>
+    </a-entity
+  
+    <!-- ข้อความ -->
+   
+  </a-scene>
+
+  <!-- Information Box -->
+  <div class="info-box">
+    <h3>Bamboo Bicycle</h3>
+    <p>
+      Bamboo Bicycle First Produced: Late 19th century 
+      Significance: A bicycle made from natural materials like bamboo, known for being lightweight and environmentally friendly.
+    </p>
+  </div>
+
+   <script>
+      // Add navigation to Warship page on click
+      document.querySelectorAll('.clickable').forEach(entity => {
+        entity.addEventListener('click', () => {
+          // Redirect to the Warships page
+          window.location.href = 'index.html';
+        });
+      });
+    </script>
+</body>
+
+</html>

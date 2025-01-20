@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outer Space Scene</title>
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    .info-box {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 15px;
+      border-radius: 10px;
+      max-width: 300px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .info-box h3 {
+      margin: 0 0 10px;
+    }
+
+    .info-box p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <a-scene inspector="" keyboard-shortcuts="" screenshot="" xr-mode-ui="" device-orientation-permission-ui="">
+
+    <!-- futuristic_free-standing_terminal-->
+    <a-entity gltf-model="model_spaceship/futuristic_free-standing_terminal.glb" position="13.28916 5.7468 46.08523" scale="0.5 0.5 0.5">
+    </a-entity>
+
+    <!-- uxrzone_space_diorama_hologram_02-->
+    <a-entity gltf-model="model_spaceship/uxrzone_space_diorama_hologram_02.glb" position="3.514 -2.322 1.482" scale="4 4 4">
+    </a-entity>
+
+    <!-- Spaceship 2 -->
+    <a-entity gltf-model="model_spaceship/light_fighter_spaceship_-_free_- (1).glb" position="12.32459 3.94024 2.44444" scale="1.5 1.5 1.5" animation="property: position; dir: alternate; loop: true; dur: 3000; to: 0 3.5 -10">
+    </a-entity>
+
+    <!-- Spaceship 3 -->
+    <a-entity gltf-model="model_spaceship/spaceship.glb" position="-6.38817 3.89384 0.2093" scale="4 4 4" animation="property: position; dir: alternate; loop: true; dur: 3000; to: 0 3.5 -10">
+    </a-entity>
+
+    <a-entity gltf-model="model_spaceship/industrial_button.glb" position="0.957 0.152 14.72084" scale="7.337 4.163 6.038"  class="clickable">
+    </a-entity>
+
+    <a-sound 
+    src="background-music-mp3-free-download-267823.mp3" 
+    autoplay="true" 
+    loop="true" 
+    position="0 2 -3">
+  </a-sound>
+  >
+  <a-entity 
+        camera 
+        position="-5.638 1.600 7.313" 
+        wasd-controls 
+        look-controls="enabled: true">
+        <a-entity 
+          cursor="rayOrigin: mouse" 
+          raycaster="objects: .clickable" 
+          position="0 0 -1" 
+          geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" 
+          material="color: white; shader: flat">
+        </a-entity>
+
+    <!-- Camera -->
+  </a-scene>
+ 
+  <!-- Information Box -->
+  <div class="info-box">
+    <h3>James Webb Space Telescope (JWST)</h3>
+    <p>
+      Developers: NASA, ESA, CSA
+      Features: Most powerful space telescope; studies early universe and galaxy structures.
+      Mission: Delivered deepest universe images in 2022.
+    </p>
+  </div>
+  <script>
+    // Add navigation to Warship page on click
+    document.querySelectorAll('.clickable').forEach(entity => {
+      entity.addEventListener('click', () => {
+        // Redirect to the Warships page
+        window.location.href = 'index.html';
+      });
+    });
+  </script>
+
+
+</body>
+</html>
