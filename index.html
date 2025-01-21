@@ -118,6 +118,9 @@
       </a-entity>
     </a-entity>
 
+    <a-entity id="playButton" geometry="primitive: plane; height: 0.5; width: 1" material="color: green" 
+          position="-9.061 0 -5.408" text="value: Play Sound; align: center"></a-entity>
+
 
     <a-sound src="Sound.mp3" crossorigin="anonymous" autoplay="true" loop="true" position="0 1.6 -3" volume="100"></a-sound>
 
@@ -148,6 +151,9 @@
     document.querySelectorAll('.clickToTractor').forEach(entity => {
       entity.addEventListener('click', () => { window.location.href = 'tractor.html'; });
     });
+     document.getElementById('playButton').addEventListener('click', () => {
+    const sound = document.querySelector('a-sound');
+    sound.components.sound.playSound();
   </script>
 
 
